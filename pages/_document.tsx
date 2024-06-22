@@ -1,6 +1,10 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import NextDocument, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from "next/document";
 
-export default function Document() {
+type DocumentType = React.FC & {
+	getInitialProps: (ctx: DocumentContext) => Promise<DocumentInitialProps>;
+};
+
+const Document: DocumentType = () => {
 	return (
 		<Html lang="en">
 			<Head />
@@ -10,4 +14,11 @@ export default function Document() {
 			</body>
 		</Html>
 	);
-}
+};
+
+Document.getInitialProps = async (ctx: DocumentContext): Promise<DocumentInitialProps> => {
+	const initialProps = await NextDocument.getInitialProps(ctx);
+	return { ...initialProps };
+};
+
+export default Document;
