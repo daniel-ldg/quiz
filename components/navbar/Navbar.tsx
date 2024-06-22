@@ -1,16 +1,12 @@
-import ProfileDropdown from "../profile/ProfileDrodown";
-import ThemeSelector from "./ThemeSelector";
+import ProfileDropdown from "../profile/ProfileDropdown";
 
 const Navbar = () => {
 	return (
-		<div className="navbar bg-base-200 border max-w-sm sm:max-w-2xl lg:max-w-3xl rounded-full mx-auto mt-3 shadow-lg">
+		<div className="navbar bg-white border max-w-sm sm:max-w-2xl lg:max-w-3xl rounded-full mx-auto mt-3">
 			<div className="flex-1">
-				<a className="btn btn-ghost text-xl rounded-full">daisyUI</a>
+				<h1 className="text-xl font-bold ml-2">Quiz</h1>
 			</div>
-			<div className="flex-none gap-1">
-				<ThemeSelector />
-				<ProfileDropdown />
-			</div>
+			<ProfileDropdown />
 		</div>
 	);
 };
