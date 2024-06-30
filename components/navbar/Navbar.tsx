@@ -2,7 +2,7 @@ import ProfileDropdown from "../profile/ProfileDropdown";
 
 const Navbar = () => {
 	return (
-		<div className="navbar bg-white border max-w-sm sm:max-w-2xl lg:max-w-3xl rounded-full mx-auto mt-3">
+		<div className="navbar bg-white border rounded-full mt-3">
 			<div className="flex-1">
 				<h1 className="text-xl font-bold ml-2">Quiz</h1>
 			</div>

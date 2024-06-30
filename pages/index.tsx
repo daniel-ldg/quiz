@@ -1,5 +1,7 @@
+import GameContainer from "@/components/game/GameContainer";
+
 const Home: React.FC = () => {
-	return <>Hola.</>;
+	return <GameContainer />;
 };
 
 export default Home;
